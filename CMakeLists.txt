@@ -35,4 +35,7 @@ add_executable(feature_detection_node src/feature_detection.cpp)
 target_link_libraries(feature_detection_node ${OpenCV_LIBS} ${catkin_LIBRARIES} ${PROJECT_SOURCE_DIR}/include/libsurf.so)
 
 add_executable(vo_node src/visodo.cpp)
-target_link_libraries(vo_node ${OpenCV_LIBS} ${catkin_LIBRARIES})
+target_link_libraries(vo_node ${OpenCV_LIBS} ${catkin_LIBRARIES} ${PROJECT_SOURCE_DIR}/include/libsurf.so)
+
+add_executable(visual_odometry_node src/visual_odometry.cpp)
+target_link_libraries(visual_odometry_node ${OpenCV_LIBS} ${catkin_LIBRARIES} ${PROJECT_SOURCE_DIR}/include/libsurf.so)
